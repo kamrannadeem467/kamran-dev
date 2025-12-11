@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Main Page</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- Navbar (loaded from partial) -->
+    <div id="site-header" aria-hidden="false"></div>
+
+    <script>
+        // Load header partial and inject into page
+        (function loadHeader() {
+            fetch('partials/header.html')
+                .then(function (res) { return res.ok ? res.text() : Promise.reject('Header not found'); })
+                .then(function (html) {
+                    document.getElementById('site-header').innerHTML = html;
+                })
+                .catch(function (err) {
+                    console.warn('Failed to load header partial:', err);
+                });
+        })();
+    </script>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="floating-shape shape1"></div>
+        <div class="floating-shape shape2"></div>
+
+        <div>
+            <h1>Hello, I’m <span style="color:#ff6b00;">Kamran</span><br>A Professional Web Developer</h1>
+            <p>I build modern, responsive and interactive websites that help businesses grow online.</p>
+            <a href="about.html" class="btn btn-custom" style=" position: relative;">View My Work</a>
+        </div>
+    </section>
+
+     <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="font-weight:700; font-size:2rem;">Skills</h2>
+                <p style="opacity:0.8; margin-top:8px;">Tools and technologies I use to build web experiences.</p>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="skill">
+                        <div class="skill-name">
+                            <span>HTML</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" data-percent="90" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-name">
+                            <span>CSS</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" data-percent="80"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-name">
+                            <span>React Js</span>
+                            <span class="skill-percent">55%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" data-percent="55"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-name">
+                            <span>Laravel</span>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" data-percent="75"></div>
+                        </div>
+                    </div>
+
+                     <div class="skill">
+                        <div class="skill-name">
+                            <span>.Net Core</span>
+                            <span class="skill-percent">60%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" data-percent="60"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 text-center">
+                    <!-- Optional: add an illustrative image, badge set, or short bio -->
+                    <img src="assets/How-to-become-a-Full-Stack-Web-Developer--451x300.png" alt="Skills illustration" class="img-fluid rounded" style="opacity:0.95;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Services Section -->
+    <section id="services" class="services-section py-5">
+    <div class="container">
+        <div class="section-title text-center mb-5">
+        <h2 style="font-weight:700; font-size:2rem;">Services</h2>
+        <p style="opacity:0.8; margin-top:8px;">What I offer — each service is crafted to help businesses build, improve, and scale their digital presence.</p>
+        </div>
+
+        <div class="row g-4">
+
+        <!-- Full Website Development -->
+        <!-- <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+            <div>
+                <div class="service-icon">FWD</div>
+                <div class="service-title">Full Website Development</div>
+                <div class="service-desc">Complete responsive websites built from scratch with modern front-end and back-end technologies.</div>
+            </div>
+            <button type="button" class="btn btn-outline-light btn-service service-details"
+                    data-title="Full Website Development"
+                    data-desc="End-to-end website creation using HTML, CSS, JavaScript, Laravel, and .NET Core. Includes frontend design, backend logic, database integration, and deployment for a fully functional online presence.">
+                Details
+            </button>
+            </div>
+        </div> -->
+
+        <!-- Frontend Web Development -->
+        <div class="col-md-6 col-lg-4"> 
+            <div class="service-card">
+            <div>
+                <div class="service-icon">FWD</div>
+                <div class="service-title">Frontend Website Development</div>
+                <div class="service-desc">Crafting fast, responsive, and user-friendly web interfaces using clean, maintainable code.</div>
+            </div>
+            <button type="button" class="btn btn-outline-light btn-service service-details"
+                    data-title="Frontend Web Development"
+                    data-desc="High-quality user interfaces built with HTML, CSS, Bootstrap, and JavaScript. Focused on responsiveness, interactivity, and accessibility for seamless user experiences.">
+                Details
+            </button>
+            </div>
+        </div>
+
+        <!-- Laravel Web Application Development -->
+        <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+            <div>
+                <div class="service-icon">LWAD</div>
+                <div class="service-title">Laravel Web Application Development</div>
+                <div class="service-desc">Developing dynamic, secure, and scalable web apps powered by Laravel.</div>
+            </div>
+            <button type="button" class="btn btn-outline-light btn-service service-details"
+                    data-title="Laravel Web Application Development"
+                    data-desc="Building modern web applications with Laravel framework, including admin panels, authentication systems, and e-commerce features.">
+                Details
+            </button>
+            </div>
+        </div>
+
+        <!-- .NET Core Web Development -->
+        <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+            <div>
+                <div class="service-icon">.NET</div>
+                <div class="service-title">.NET Core Web Application Development</div>
+                <div class="service-desc">Enterprise-grade applications built on .NET Core with efficient backend architecture.</div>
+            </div>
+            <button type="button" class="btn btn-outline-light btn-service service-details"
+                    data-title=".NET Core Web Development"
+                    data-desc="Creating scalable and secure web applications using ASP.NET Core MVC and SQL Server. From backend APIs to full enterprise systems, optimized for performance and reliability.">
+                Details
+            </button>
+            </div>
+        </div>
+
+        <!-- Website Maintenance & Bug Fixing -->
+        <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+            <div>
+                <div class="service-icon">MWM</div>
+                <div class="service-title">Mini Website Maintenance & Bug Fixing</div>
+                <div class="service-desc">Ensuring your website stays updated, secure, and performs smoothly at all times.</div>
+            </div>
+            <button type="button" class="btn btn-outline-light btn-service service-details"
+                    data-title="Website Maintenance & Bug Fixing"
+                    data-desc="From fixing broken features and optimizing speed to updating backend code, I provide reliable ongoing maintenance to keep your website running perfectly.">
+                Details
+            </button>
+            </div>
+        </div>
+
+        </div>
+    </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="font-weight:700; font-size:2rem;">Projects</h2>
+                <p style="opacity:0.8; margin-top:8px;">Selected projects showcasing responsive, performant and accessible work.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <article class="project-card">
+                        <img src="assets/e-commerce-1.png" alt="Jewellery E-Commerce Frontend">
+                        <div class="project-content">
+                            <div class="project-title">Jewellery E-Commerce Frontend</div>
+                            <div class="project-desc">
+                                A clean and responsive e-commerce frontend designed for a jewellery brand. 
+                                Built as an academic project focusing on UI layout, product listings, cart UI, 
+                                and modern styling using HTML, CSS, and JavaScript.
+                            </div>
+
+                            <a href="https://kamrannadeem467.github.io/Pascal-Imitation-Jewellery/" 
+                            class="btn btn-outline-light btn-view" 
+                            target="_blank">
+                            View Project
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <article class="project-card">
+                        <img src="assets/BagStoreProject1.png" alt="Project 2">
+                        <div class="project-content">
+                            <div class="project-title">MY Business</div>
+                            <div class="project-desc">Interactive dashboard with charts, role-based access and realtime updates.</div>
+                            <a href="#" class="btn btn-outline-light btn-view" data-bs-toggle="modal" data-bs-target="#previewModal">
+                            View Project
+                            </a>
+
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <article class="project-card">
+                        <img src="assets/Blog-1.png" alt="Project 3">
+                        <div class="project-content">
+                            <div class="project-title">Marketing Site</div>
+                            <div class="project-desc">High-conversion marketing website with CMS integration and A/B testing setup.</div>
+                            <a href="#" class="btn btn-outline-light btn-view">View Project</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <article class="project-card">
+                        <img src="assets/Men-Saloon-Project.png" alt="Project 3">
+                        <div class="project-content">
+                            <div class="project-title">Marketing Site</div>
+                            <div class="project-desc">High-conversion marketing website with CMS integration and A/B testing setup.</div>
+                            <a href="#" class="btn btn-outline-light btn-view">View Project</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="center-view-more">
+                <a href="/projects.html" class="btn btn-custom">View More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="font-weight:700; font-size:2rem;">Experience</h2>
+                <p style="opacity:0.8; margin-top:8px;">Professional journey, freelance work, competitions and certifications.</p>
+            </div>
+
+            <ul class="timeline">
+                <li class="timeline-item">
+                    <div class="timeline-icon">A</div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">Aptech Journey</div>
+                        <div class="timeline-meta">Training & coursework</div>
+                        <div>Completed structured coursework and hands-on projects focused on web technologies, software fundamentals and practical development skills.</div>
+                    </div>
+                </li>
+
+                <li class="timeline-item">
+                    <div class="timeline-icon">F</div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">Freelance Projects</div>
+                        <div class="timeline-meta">Client work</div>
+                        <div>Delivered multiple freelance projects including small business websites, landing pages and custom integrations — handling design, development and deployment.</div>
+                    </div>
+                </li>
+
+                <li class="timeline-item">
+                    <div class="timeline-icon">C</div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">Competitions</div>
+                        <div class="timeline-meta">Techwiz 5</div>
+                        <div>Participated in Techwiz 5 — solved timed challenges and presented project work in front of judges. Gained problem-solving experience and team collaboration skills.</div>
+                    </div>
+                </li>
+
+                <li class="timeline-item">
+                    <div class="timeline-icon">Cert</div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">Certifications</div>
+                        <div class="timeline-meta">CIT · Web Designing</div>
+                        <div>
+                            <span class="cert-badge">CIT</span>
+                            <span class="cert-badge">Web Designing</span>
+                            <div style="margin-top:8px;">Completed certifications covering core IT topics and modern web design principles.</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="font-weight:700; font-size:2rem;">Achievements</h2>
+                <p style="opacity:0.8; margin-top:8px;">Highlights from competitions, deployments, learning progress and certifications.</p>
+            </div>
+
+            <div class="achievements-grid" role="list">
+                <div class="achievement-card" role="listitem">
+                    <div class="achievement-badge">T</div>
+                    <div>
+                        <div class="achievement-title">Techwiz — Top 10</div>
+                        <div class="achievement-desc">Placed in the top 10 of a competitive Techwiz edition by solving timed technical challenges and presenting a project demo.</div>
+                    </div>
+                </div>
+
+                <div class="achievement-card" role="listitem">
+                    <div class="achievement-badge">D</div>
+                    <div>
+                        <div class="achievement-title">Projects Deployed</div>
+                        <div class="achievement-desc">Multiple projects deployed to production (VPS, shared hosting and static/CDN deployments) with proper CI/CD and monitoring setups.</div>
+                    </div>
+                </div>
+
+                <div class="achievement-card" role="listitem">
+                    <div class="achievement-badge">.NET</div>
+                    <div>
+                        <div class="achievement-title">Learning .NET Core</div>
+                        <div class="achievement-desc">Currently learning .NET Core for backend APIs and cross-platform development — building sample services and integrating with frontend apps.</div>
+                    </div>
+                </div>
+
+                <div class="achievement-card" role="listitem">
+                    <div class="achievement-badge">L</div>
+                    <div>
+                        <div class="achievement-title">Laravel Expertise</div>
+                        <div class="achievement-desc">Experienced with Laravel for rapid backend development, Eloquent ORM, Blade templating and API-driven applications.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="achievements-footer">
+                <a href="Muhammad Kamran Web App Developer.pdf" class="btn-cv" download aria-label="Download PDF CV">Download PDF CV</a>
+            </div> -->
+            <div class="achievements-footer">
+                <a href="../assets/Muhammad_Kamran_Web_App_Developer.pdf" class="btn-cv" target="_blank" aria-label="Open PDF CV">View PDF CV</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Service Details Modal -->
+    <div class="modal fade" id="serviceModal" tabindex="-1" aria-labelledby="serviceModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-white">
+          <div class="modal-header border-0">
+            <h5 class="modal-title" id="serviceModalLabel">Service</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="serviceModalBody">
+            <!-- Filled by script -->
+          </div>
+          <div class="modal-footer border-0">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <a href="contact.html" class="btn btn-primary">Request This Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer (loaded from partial) -->
+    <div id="site-footer" aria-hidden="false"></div>
+
+
+    <!-- Preview not available section -->
+    <div class="modal fade" id="previewModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-white">
+        <div class="modal-header">
+            <h5 class="modal-title">Preview Not Available</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+            This project is currently private and has not been deployed yet.
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        // Load footer partial and inject into page, then init footer logic
+        (function loadFooter() {
+            fetch('partials/footer.html')
+                .then(function (res) { return res.ok ? res.text() : Promise.reject('Footer not found'); })
+                .then(function (html) {
+                    document.getElementById('site-footer').innerHTML = html;
+                    // run counters init after footer is in DOM
+                    if (typeof window.initFooterCounters === 'function') {
+                        window.initFooterCounters();
+                    }
+                })
+                .catch(function (err) {
+                    console.warn('Failed to load footer partial:', err);
+                });
+        })();
+    </script>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Delegated smooth scroll handler (works for header loaded dynamically)
+            $(document).on('click', 'a.nav-link', function(e) {
+                var target = $(this).attr('href');
+                if (!target || target === '#') return;
+                if (target && $(target).length) {
+                    e.preventDefault();
+                    $('html, body').animate({ scrollTop: $(target).offset().top - 70 }, 800);
+                }
+            });
+
+            // Animate skill progress bars when the section enters viewport
+            var skillsAnimated = false;
+            function animateSkills() {
+                var $section = $('#skills');
+                if (skillsAnimated) return;
+                if ($section.length === 0) return;
+                var windowBottom = $(window).scrollTop() + $(window).height();
+                var sectionTop = $section.offset().top;
+                if (windowBottom >= sectionTop + 100) {
+                    $section.find('.progress-bar').each(function() {
+                        var $bar = $(this);
+                        var percent = $bar.data('percent') || 0;
+                        $bar.css('width', percent + '%');
+                    });
+                    skillsAnimated = true;
+                }
+            }
+
+            // Run on load and on scroll
+            animateSkills();
+            $(window).on('scroll resize', animateSkills);
+
+            // Service details modal population
+            $('.service-details').on('click', function () {
+                var title = $(this).data('title') || 'Service';
+                var desc = $(this).data('desc') || '';
+                $('#serviceModalLabel').text(title);
+                $('#serviceModalBody').text(desc);
+                var modalEl = document.getElementById('serviceModal');
+                var modal = new bootstrap.Modal(modalEl);
+                modal.show();
+            });
+        });
+
+        // Expose footer counters init so loader can call it after partial injection
+        window.initFooterCounters = function() {
+            var startYear = 2019; // adjust if needed
+            var currentYear = new Date().getFullYear();
+            var years = Math.max(0, currentYear - startYear);
+
+            var projects = $('.project-card').length || 0;
+            var services = $('.service-card').length || 0;
+            var certs = $('.cert-badge').length || 0;
+
+            $('#currentYear').text(currentYear);
+
+            function animateCount($el, to, duration) {
+                var from = 0;
+                var start = Date.now();
+                var timer = setInterval(function() {
+                    var progress = Math.min(1, (Date.now() - start) / duration);
+                    var value = Math.floor(progress * (to - from) + from);
+                    $el.text(value);
+                    if (progress === 1) clearInterval(timer);
+                }, 30);
+            }
+
+            // If footer not yet in DOM these selectors will fail silently; safe to call after load
+            animateCount($('#counter-years'), years, 1000);
+            animateCount($('#counter-projects'), projects, 900);
+            animateCount($('#counter-services'), services, 900);
+            animateCount($('#counter-certs'), certs, 900);
+        };
+    </script>
+</body>
+</html>

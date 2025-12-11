@@ -1,0 +1,49 @@
+<!-- Navbar (glass background) -->
+<style>
+  /* Glass navbar */
+  .glass-navbar {
+    background: rgba(255,255,255,0.04);
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
+    backdrop-filter: blur(8px) saturate(120%);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    transition: background-color .2s ease, box-shadow .2s ease;
+  }
+
+  /* Slightly stronger on scroll (optional - page script can toggle .glassy) */
+  .glass-navbar.glassy {
+    background: rgba(0,0,0,0.35);
+    border-bottom-color: rgba(255,255,255,0.08);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+  }
+
+  .glass-navbar .navbar-brand,
+  .glass-navbar .nav-link {
+    color: #fff;
+  }
+
+  .glass-navbar .nav-link:hover {
+    color: #ff6b00;
+  }
+
+  .glass-navbar .navbar-toggler {
+    border-color: rgba(255,255,255,0.08);
+  }
+</style>
+
+<!-- Navbar -->
+<nav class="navbar navbar-dark navbar-expand-lg glass-navbar fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">KAMRAN NADEEM</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

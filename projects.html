@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects — Kamran Nadeem</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+<style>
+    .contact-banner {
+        width: 100%;
+        height: 220px; /* you can adjust 180–250px */
+        overflow: hidden;
+    }
+
+    .contact-banner-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+</style>
+  <style>
+    .projects-hero { min-height:28vh; display:flex; align-items:center; }
+    .project-grid .project-card { background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.04); border-radius:12px; overflow:hidden; transition:transform .18s; }
+    .project-grid .project-card:hover { transform:translateY(-6px); box-shadow:0 12px 30px rgba(0,0,0,0.45); }
+    .project-card img { width:100%; height:180px; object-fit:cover; display:block; }
+    .project-tags { gap:8px; display:flex; flex-wrap:wrap; margin-top:8px; }
+    .tag { background:rgba(255,255,255,0.03); padding:6px 8px; border-radius:6px; font-size:.85rem; color:#cfcfcf; }
+    .btn-custom { padding:10px 20px; border-radius:40px; background:linear-gradient(90deg,#ff6b00,#ff0099); color:#fff; border:none; }
+  </style>
+</head>
+<body>
+
+  <!-- header partial -->
+  <div id="site-header"></div>
+  <script>
+    (function loadHeader(){
+      fetch('partials/header.html')
+        .then(r => r.ok ? r.text() : Promise.reject('header not found'))
+        .then(html => { document.getElementById('site-header').innerHTML = html; })
+        .catch(()=>{});
+    })();
+  </script>
+    <!-- Full width slim contact image -->
+    <div class="contact-banner">
+        <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/is_web_development_good_career.jpg" alt="Contact Banner" class="contact-banner-img">
+    </div>
+  <!-- Hero -->
+  <section class="projects-hero py-5 bg-transparent">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <h1 style="font-weight:700;">Projects</h1>
+          <p style="opacity:.85; max-width:720px;">All my public projects — click "View" for details or use the Live / Source links where available.</p>
+        </div>
+        <div class="col-md-4 text-md-end text-start">
+          <a class="btn btn-custom" href="/projects.html">All Projects</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Grid -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4 project-grid">
+        <div class="col-md-6 col-lg-4">
+          <article class="project-card">
+            <img src="https://via.placeholder.com/800x500/111/ff6b00?text=Project+1" alt="E-commerce Platform">
+            <div class="p-3">
+              <div class="project-title" style="font-weight:700;">E-commerce Platform</div>
+              <div class="project-desc" style="opacity:.85; margin-top:6px;">Custom online store with product management and payments.</div>
+              <div class="project-tags mt-2">
+                <span class="tag">Laravel</span><span class="tag">Stripe</span><span class="tag">MySQL</span>
+              </div>
+              <div class="mt-3 d-flex gap-2">
+                <button class="btn btn-outline-light btn-sm view-project" 
+                        data-title="E-commerce Platform"
+                        data-desc="Full e-commerce solution: product catalog, cart, checkout, order management and analytics. Built with Laravel and deployed to VPS."
+                        data-live="#"
+                        data-src="#">
+                  View
+                </button>
+                <a class="btn btn-outline-light btn-sm" href="#" target="_blank" rel="noopener">Live</a>
+                <a class="btn btn-outline-light btn-sm" href="#" target="_blank" rel="noopener">Source</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <article class="project-card">
+            <img src="https://via.placeholder.com/800x500/111/ff6b00?text=Project+2" alt="SaaS Dashboard">
+            <div class="p-3">
+              <div class="project-title" style="font-weight:700;">SaaS Dashboard</div>
+              <div class="project-desc" style="opacity:.85; margin-top:6px;">Interactive admin dashboard with realtime charts and role management.</div>
+              <div class="project-tags mt-2">
+                <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Socket</span>
+              </div>
+              <div class="mt-3 d-flex gap-2">
+                <button class="btn btn-outline-light btn-sm view-project" 
+                        data-title="SaaS Dashboard"
+                        data-desc="Admin dashboard supporting real-time updates, RBAC and analytics widgets. Frontend in React, backend in Node.js."
+                        data-live="#"
+                        data-src="#">
+                  View
+                </button>
+                <a class="btn btn-outline-light btn-sm" href="#" target="_blank" rel="noopener">Live</a>
+                <a class="btn btn-outline-light btn-sm" href="#" target="_blank" rel="noopener">Source</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <article class="project-card">
+            <img src="https://via.placeholder.com/800x500/111/ff6b00?text=Project+3" alt="Marketing Site">
+            <div class="p-3">
+              <div class="project-title" style="font-weight:700;">Marketing Site</div>
+              <div class="project-desc" style="opacity:.85; margin-top:6px;">High-conversion marketing website with CMS integration.</div>
+              <div class="project-tags mt-2">
+                <span class="tag">HTML/CSS</span><span class="tag">SEO</span>
+              </div>
+              <div class="mt-3 d-flex gap-2">
+                <button class="btn btn-outline-light btn-sm view-project" 
+                        data-title="Marketing Site"
+                        data-desc="Landing & marketing site optimized for conversions, A/B tests and CMS-driven content."
+                        data-live="#"
+                        data-src="#">
+                  View
+                </button>
+                <a class="btn btn-outline-light btn-sm" href="#" target="_blank" rel="noopener">Live</a>
+                <a class="btn btn-outline-light btn-sm" href="#" target="_blank" rel="noopener">Source</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- add more project cards as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Detail Modal -->
+  <div class="modal fade" id="projectModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="projectModalTitle">Project</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="projectModalBody"></div>
+        <div class="modal-footer border-0">
+          <a id="projectLive" class="btn btn-outline-light" target="_blank" rel="noopener">Live</a>
+          <a id="projectSource" class="btn btn-outline-light" target="_blank" rel="noopener">Source</a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer partial -->
+  <div id="site-footer"></div>
+  <script>
+    (function loadFooter(){
+      fetch('partials/footer.html')
+        .then(r => r.ok ? r.text() : Promise.reject('footer not found'))
+        .then(html => {
+          document.getElementById('site-footer').innerHTML = html;
+          if (typeof window.initFooterCounters === 'function') window.initFooterCounters();
+        })
+        .catch(()=>{});
+    })();
+  </script>
+
+  <!-- scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    $(function(){
+      // delegated click (header injected dynamically)
+      $(document).on('click', 'a.nav-link', function(e){
+        var target = $(this).attr('href');
+        if(!target || target === '#') return;
+        if($(target).length){ e.preventDefault(); $('html,body').animate({ scrollTop: $(target).offset().top - 70 }, 600); }
+      });
+
+      // Project modal population
+      $(document).on('click', '.view-project', function(){
+        var $btn = $(this);
+        var title = $btn.data('title') || 'Project';
+        var desc = $btn.data('desc') || '';
+        var live = $btn.data('live') || '#';
+        var src = $btn.data('src') || '#';
+
+        $('#projectModalTitle').text(title);
+        $('#projectModalBody').html('<p style="opacity:.9;">' + desc + '</p>');
+        $('#projectLive').attr('href', live).toggle(Boolean(live && live !== '#'));
+        $('#projectSource').attr('href', src).toggle(Boolean(src && src !== '#'));
+
+        new bootstrap.Modal(document.getElementById('projectModal')).show();
+      });
+    });
+  </script>
+</body>
+</html>

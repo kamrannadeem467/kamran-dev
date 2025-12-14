@@ -8,21 +8,20 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-<style>
-    .contact-banner {
-        width: 100%;
-        height: 220px; /* you can adjust 180–250px */
-        overflow: hidden;
-    }
-
-    .contact-banner-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-    }
-</style>
   <style>
+      .contact-banner {
+          width: 100%;
+          height: 220px; /* you can adjust 180–250px */
+          overflow: hidden;
+      }
+
+      .contact-banner-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+      }
+
     .projects-hero { min-height:28vh; display:flex; align-items:center; }
     .project-grid .project-card { background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.04); border-radius:12px; overflow:hidden; transition:transform .18s; }
     .project-grid .project-card:hover { transform:translateY(-6px); box-shadow:0 12px 30px rgba(0,0,0,0.45); }
@@ -54,7 +53,7 @@
       <div class="row align-items-center">
         <div class="col-md-8">
           <h1 style="font-weight:700;">Projects</h1>
-          <p style="opacity:.85; max-width:720px;">All my public projects — click "View" for details or use the Live / Source links where available.</p>
+          <p style="opacity:.85; max-width:720px;">Projects I’ve built — click “View” to explore features and details. Live previews are available for some projects.</p>
         </div>
         <div class="col-md-4 text-md-end text-start">
           <a class="btn btn-custom" href="/projects.html">All Projects</a>
@@ -67,82 +66,181 @@
   <section class="py-5">
     <div class="container">
       <div class="row g-4 project-grid">
+        <!-- Jewellery E-Commerce Frontend -->
         <div class="col-md-6 col-lg-4">
-          <article class="project-card">
-            <img src="https://via.placeholder.com/800x500/111/ff6b00?text=Project+1" alt="E-commerce Platform">
+         <article class="project-card">
+            <img src="assets/e-commerce-1.png" alt="Jewellery E-Commerce Frontend">
             <div class="p-3">
-              <div class="project-title" style="font-weight:700;">E-commerce Platform</div>
-              <div class="project-desc" style="opacity:.85; margin-top:6px;">Custom online store with product management and payments.</div>
-              <div class="project-tags mt-2">
-                <span class="tag">Laravel</span><span class="tag">Stripe</span><span class="tag">MySQL</span>
+              <div class="project-title" style="font-weight:700;">
+                Jewellery E-Commerce Frontend
               </div>
+
+              <!-- SHORT DESCRIPTION (Card Display) -->
+              <div class="project-desc" style="opacity:.85; margin-top:6px;">
+                Responsive jewellery e-commerce frontend with modern UI, product listings, and cart interface.
+              </div>
+
+              <div class="project-tags mt-2" style="cursor: default;">
+                <span class="tag">HTML</span>
+                <span class="tag">Bootstrap</span>
+                <span class="tag">JavaScript</span>
+              </div>
+
               <div class="mt-3 d-flex gap-2">
-                <button class="btn btn-outline-light btn-sm view-project" 
-                        data-title="E-commerce Platform"
-                        data-desc="Full e-commerce solution: product catalog, cart, checkout, order management and analytics. Built with Laravel and deployed to VPS."
-                        data-live="#"
-                        data-src="#">
+                <!-- VIEW BUTTON (FULL DETAILS) -->
+                <button
+                  class="btn btn-outline-light btn-sm view-project"
+                  data-title="Jewellery E-Commerce Frontend"
+                  data-desc="
+                  A clean and responsive jewellery e-commerce frontend developed as an academic project.
+                  The project focuses on modern UI/UX design, structured product listings, shopping cart interface, and responsive layouts for all screen sizes.
+                      
+                  Key Features:
+                  • Elegant jewellery-focused UI design
+                  • Product listing and category layout
+                  • Cart user interface (UI only)
+                  • Fully responsive design
+                  • Clean and reusable components
+
+                  Technologies Used:
+                  HTML, CSS, Bootstrap, and JavaScript.
+                  "
+                  data-live="#"
+                  data-src=""
+                >
                   View
                 </button>
-                <a class="btn btn-outline-light btn-sm" href="#" target="_blank" rel="noopener">Live</a>
-                <a class="btn btn-outline-light btn-sm" href="#" target="_blank" rel="noopener">Source</a>
+
+                <!-- LIVE BUTTON -->
+                <a class="btn btn-outline-light btn-sm" href="https://kamrannadeem467.github.io/Pascal-Imitation-Jewellery/" target="_blank" rel="noopener">
+                  Live
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+        <!-- my business wesbite  -->
+        <div class="col-md-6 col-lg-4">
+          <article class="project-card">
+            <img src="assets/BagStoreProject1.png" alt="MY Business Website">
+
+            <div class="p-3">
+              <div class="project-title" style="font-weight:700;">MY Business</div>
+
+              <!-- SHORT DESCRIPTION (Card Display) -->
+              <div class="project-desc" style="opacity:.85; margin-top:6px;">
+                My own business website with full website functionality, authentication, and an interactive admin dashboard.
+              </div>
+
+              <div class="project-tags mt-2">
+                <span class="tag">Laravel</span>
+                <span class="tag">Bootstrap</span>
+                <span class="tag">MySQL</span>
+              </div>
+
+              <div class="mt-3 d-flex gap-2">
+                <!-- VIEW BUTTON (FULL DETAILS) -->
+                <button
+                  class="btn btn-outline-light btn-sm view-project"
+                  data-title="MY Business – Full Web Application"
+                  data-desc="This is my own business website built as a complete web application.
+
+                  Features:
+                  • Full public-facing website with modern UI/UX
+                  • Secure user authentication (passwordless login system)
+                  • Interactive admin dashboard with role-based access control
+                  • Product & service management, orders, and business tracking
+
+                  Tech Stack:
+                    Backend: Laravel
+                    Frontend: Blade + Bootstrap
+                    Database: MySQL"
+                  data-live="#"
+                >
+                  View
+                </button>
+
+                <!-- LIVE BUTTON -->
+                <a class="btn btn-outline-light btn-sm" href="#" target="_blank" data-bs-toggle="modal" data-bs-target="#previewModal">Live</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- Men’s Salon Website -->
+        <div class="col-md-6 col-lg-4">
+          <article class="project-card">
+            <img src="assets/Men-Saloon-Project.png" alt="Men’s Salon Website">
+
+            <div class="p-3">
+              <div class="project-title" style="font-weight:700;">
+                Men’s Salon Website
+              </div>
+
+              <!-- SHORT CARD DESCRIPTION -->
+              <div class="project-desc" style="opacity:.85; margin-top:6px;">
+                Men’s salon business website with services display, admin panel, and time-based online appointment booking.
+              </div>
+
+              <div class="project-tags mt-2">
+                <span class="tag">Laravel</span>
+                <span class="tag">Bootstrap</span>
+                <span class="tag">MySQL</span>
+              </div>
+
+              <div class="mt-3 d-flex gap-2">
+                <!-- VIEW BUTTON (FULL DETAILS) -->
+                <button
+                  class="btn btn-outline-light btn-sm view-project"
+                  data-title="Men’s Salon – Business Web Application"
+                  data-desc="A complete men’s salon business web application developed to manage salon services and customer appointments.
+
+                  Key Features:
+                  • Full public-facing salon website
+                  • Services listing with pricing and details
+                  • Online appointment booking based on available time slots
+                  • Admin panel to manage services, bookings, and schedules
+                  • Customer-friendly and responsive design
+
+                  Tech Stack:
+                  Backend: Laravel
+                  Frontend: Blade + Bootstrap
+                  Database: MySQL"
+                  data-live="#"
+                >
+                  View
+                </button>
+
+                <!-- LIVE BUTTON -->
+                <a class="btn btn-outline-light btn-sm" href="#" target="_blank" data-bs-toggle="modal" data-bs-target="#previewModal">Live</a>
               </div>
             </div>
           </article>
         </div>
 
-        <div class="col-md-6 col-lg-4">
-          <article class="project-card">
-            <img src="https://via.placeholder.com/800x500/111/ff6b00?text=Project+2" alt="SaaS Dashboard">
-            <div class="p-3">
-              <div class="project-title" style="font-weight:700;">SaaS Dashboard</div>
-              <div class="project-desc" style="opacity:.85; margin-top:6px;">Interactive admin dashboard with realtime charts and role management.</div>
-              <div class="project-tags mt-2">
-                <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Socket</span>
-              </div>
-              <div class="mt-3 d-flex gap-2">
-                <button class="btn btn-outline-light btn-sm view-project" 
-                        data-title="SaaS Dashboard"
-                        data-desc="Admin dashboard supporting real-time updates, RBAC and analytics widgets. Frontend in React, backend in Node.js."
-                        data-live="#"
-                        data-src="#">
-                  View
-                </button>
-                <a class="btn btn-outline-light btn-sm" href="#" target="_blank" rel="noopener">Live</a>
-                <a class="btn btn-outline-light btn-sm" href="#" target="_blank" rel="noopener">Source</a>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <article class="project-card">
-            <img src="https://via.placeholder.com/800x500/111/ff6b00?text=Project+3" alt="Marketing Site">
-            <div class="p-3">
-              <div class="project-title" style="font-weight:700;">Marketing Site</div>
-              <div class="project-desc" style="opacity:.85; margin-top:6px;">High-conversion marketing website with CMS integration.</div>
-              <div class="project-tags mt-2">
-                <span class="tag">HTML/CSS</span><span class="tag">SEO</span>
-              </div>
-              <div class="mt-3 d-flex gap-2">
-                <button class="btn btn-outline-light btn-sm view-project" 
-                        data-title="Marketing Site"
-                        data-desc="Landing & marketing site optimized for conversions, A/B tests and CMS-driven content."
-                        data-live="#"
-                        data-src="#">
-                  View
-                </button>
-                <a class="btn btn-outline-light btn-sm" href="#" target="_blank" rel="noopener">Live</a>
-                <a class="btn btn-outline-light btn-sm" href="#" target="_blank" rel="noopener">Source</a>
-              </div>
-            </div>
-          </article>
-        </div>
 
         <!-- add more project cards as needed -->
       </div>
     </div>
   </section>
+
+  <!-- Preview not available section -->
+    <div class="modal fade" id="previewModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content bg-dark text-white">
+          <div class="modal-header">
+              <h5 class="modal-title">Preview Not Available</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+              This project is currently private and has not been deployed yet.
+          </div>
+          <div class="modal-footer">
+              <button class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
+          </div>
+          </div>
+      </div>
+    </div>
 
   <!-- Project Detail Modal -->
   <div class="modal fade" id="projectModal" tabindex="-1" aria-hidden="true">
@@ -162,6 +260,7 @@
     </div>
   </div>
 
+  
   <!-- footer partial -->
   <div id="site-footer"></div>
   <script>
@@ -179,31 +278,50 @@
   <!-- scripts -->
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    $(function(){
-      // delegated click (header injected dynamically)
-      $(document).on('click', 'a.nav-link', function(e){
-        var target = $(this).attr('href');
-        if(!target || target === '#') return;
-        if($(target).length){ e.preventDefault(); $('html,body').animate({ scrollTop: $(target).offset().top - 70 }, 600); }
-      });
+ <script>
+  $(function () {
 
-      // Project modal population
-      $(document).on('click', '.view-project', function(){
-        var $btn = $(this);
-        var title = $btn.data('title') || 'Project';
-        var desc = $btn.data('desc') || '';
-        var live = $btn.data('live') || '#';
-        var src = $btn.data('src') || '#';
+    // Smooth scroll (same as before)
+    $(document).on('click', 'a.nav-link', function (e) {
+      var target = $(this).attr('href');
+      if (!target || target === '#') return;
 
-        $('#projectModalTitle').text(title);
-        $('#projectModalBody').html('<p style="opacity:.9;">' + desc + '</p>');
-        $('#projectLive').attr('href', live).toggle(Boolean(live && live !== '#'));
-        $('#projectSource').attr('href', src).toggle(Boolean(src && src !== '#'));
-
-        new bootstrap.Modal(document.getElementById('projectModal')).show();
-      });
+      if ($(target).length) {
+        e.preventDefault();
+        $('html, body').animate({
+          scrollTop: $(target).offset().top - 70
+        }, 600);
+      }
     });
-  </script>
+
+    // Project modal population
+    $(document).on('click', '.view-project', function () {
+      var $btn = $(this);
+
+      var title = $btn.data('title') || 'Project';
+      var desc  = $btn.data('desc') || '';
+      var live  = $btn.data('live') || '#';
+
+      $('#projectModalTitle').text(title);
+
+      // 🔥 KEY FIX HERE
+      $('#projectModalBody')
+        .css('white-space', 'pre-line')
+        .text(desc); // innerHTML nahi, text()
+
+      $('#projectLive')
+        .attr('href', live)
+        .toggle(Boolean(live && live !== '#'));
+
+      $('#projectSource').hide();
+
+      new bootstrap.Modal(
+        document.getElementById('projectModal')
+      ).show();
+    });
+
+  });
+</script>
+
 </body>
 </html>

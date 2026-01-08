@@ -378,20 +378,6 @@
             margin:0; /* tighter spacing so text sits neatly under title */
         }
 
-        .achievements-footer {
-            text-align:center;
-            margin-top:26px;
-        }
-
-        .btn-cv {
-            padding:12px 28px;
-            border-radius:40px;
-            background:linear-gradient(90deg,#00c896,#00a67a);
-            color:white;
-            font-weight:700;
-            text-decoration:none;
-        }
-
         @media (max-width: 767px) {
             .hero h1 { font-size:2.2rem; }
             .hero p { font-size:1rem; }

@@ -14,26 +14,13 @@
     <!-- Site CSS -->
     <link rel="stylesheet" href="style.css" />
     <style>
-    .contact-banner {
-        width: 100%;
-        height: 220px; /* you can adjust 180–250px */
-        overflow: hidden;
-    }
-
-    .contact-banner-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-    }
-</style>
-    <style>
+        
         /* Contact button — more prominent with icon and subtle animation */
         .btn-contact {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            padding: 12px 20px;
+            padding: 13px 25px;
             border-radius: 40px;
             background: linear-gradient(90deg, #ff6b00 0%, #ff0099 100%);
             color: #fff;
@@ -90,22 +77,20 @@
     </div>
 
     <!-- About Hero -->
-    <section class="hero" id="about-hero" style="min-height:40vh;display:flex;align-items:center;">
+    <section class="hero" id="about-hero">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row">
                 <div class="col-md-7">
                     <h1 style="font-weight:700;">About <span style="color:#ff6b00;">Kamran</span></h1>
                     <p style="opacity:.85;max-width:720px;">
-                        I am a professional web developer focused on building modern, responsive and accessible web applications.
-                        I combine front-end technologies (HTML, CSS, JavaScript, React) with back-end skills (Node.js, Laravel, learning .NET Core)
-                        to deliver production-ready solutions for businesses and freelancers.
+                        I am a professional web developer specializing in building modern, responsive, and scalable web applications for businesses and startups. I deliver complete web solutions including business websites, admin dashboards, authentication systems, and custom web applications. <br><br>
+                        I work primarily with Laravel for both backend and frontend development, using Blade, Bootstrap, HTML, CSS, and JavaScript to build secure, user-friendly, and production-ready systems. I also have foundational knowledge of .NET Core and continue to expand my skills in modern web technologies.
                     </p>
 
                     <p style="margin-top:18px;">
-                        <a class="btn btn-custom mt-0" href="Kamran_Nadeem_CV.pdf" download aria-label="Download CV (PDF)">Download CV (PDF)</a>
-
+                        <a class="btn btn-custom mt-3 mb-3" href="../assets/Muhammad_Kamran_Web_App_Developer.pdf" target="_blank"aria-label="Open PDF CV">View CV (PDF)</a>
                         <!-- Updated contact button -->
-                        <a class="btn-contact ms-2" href="/contact.html" aria-label="Go to contact page">
+                        <a class="btn-contact ms-2 mb-3" href="/contact.html" aria-label="Go to contact page">
                             <span class="btn-icon" aria-hidden="true">✉</span>
                             <span>Contact Me</span>
                         </a>
@@ -136,17 +121,17 @@
         <div class="container">
             <h2 style="font-weight:700;">Bio</h2>
             <p style="opacity:.85;">
-                I started my learning journey at Aptech where I completed structured coursework and hands‑on projects.
-                Since then I have worked on freelance projects, participated in competitions (Techwiz) and deployed multiple production sites.
-                I am continuously learning — currently exploring .NET Core and deepening expertise in Laravel and modern front-end frameworks.
+                I started my development journey at Aptech, where I completed structured coursework and hands-on projects focused on web technologies.
+                Since then, I have worked on real business websites, admin panels, and complete web applications, including appointment booking systems and e-commerce style projects.
+                I continuously improve my skills, with a strong focus on Laravel-based development and currently learning .NET Core for backend expansion.
             </p>
 
             <h3 class="mt-4" style="font-weight:700;">What I do</h3>
             <ul>
-                <li>Full-stack web development (responsive front-ends, API driven backends)</li>
-                <li>UI / UX design and prototyping</li>
-                <li>Performance optimization, SEO and deployment/CI</li>
-                <li>Freelance client delivery and project ownership</li>
+                <li>Business websites and custom web application development</li>
+                <li>Admin panels, dashboards, and authentication systems</li>
+                <li>Online booking systems and database-driven applications</li>
+                <li>Website deployment, maintenance, and client support</li>
             </ul>
         </div>
     </section>
@@ -163,13 +148,13 @@
                     </div>
 
                     <div class="skill mb-3">
-                        <div class="skill-name d-flex justify-content-between"><span>CSS</span><span class="skill-percent">85%</span></div>
-                        <div class="progress"><div class="progress-bar" data-percent="85" style="width:85%"></div></div>
+                        <div class="skill-name d-flex justify-content-between"><span>CSS</span><span class="skill-percent">80%</span></div>
+                        <div class="progress"><div class="progress-bar" data-percent="80" style="width:80%"></div></div>
                     </div>
 
                     <div class="skill mb-3">
-                        <div class="skill-name d-flex justify-content-between"><span>JavaScript</span><span class="skill-percent">80%</span></div>
-                        <div class="progress"><div class="progress-bar" data-percent="80" style="width:80%"></div></div>
+                        <div class="skill-name d-flex justify-content-between"><span>React Js</span><span class="skill-percent">45%</span></div>
+                        <div class="progress"><div class="progress-bar" data-percent="45" style="width:45%"></div></div>
                     </div>
                 </div>
 
@@ -185,8 +170,8 @@
                     </div>
 
                     <div class="skill mb-3">
-                        <div class="skill-name d-flex justify-content-between"><span>React</span><span class="skill-percent">75%</span></div>
-                        <div class="progress"><div class="progress-bar" data-percent="75" style="width:75%"></div></div>
+                        <div class="skill-name d-flex justify-content-between"><span>Flutter (learning)</span><span class="skill-percent">20%</span></div>
+                        <div class="progress"><div class="progress-bar" data-percent="20" style="width:20%"></div></div>
                     </div>
                 </div>
             </div>
@@ -195,7 +180,7 @@
 
     <!-- Footer (partial) -->
     <div id="site-footer"></div>
-
+    <!-- Footer script -->
     <script>
         (function loadFooter() {
             fetch('partials/footer.html')
@@ -223,7 +208,7 @@
             }
         });
 
-        // fill about counters (animated, waits for DOM elements)
+        // fill about counters (animated only when scrolled to - Intersection Observer)
         (function fillAboutCounters() {
             var startYear = 2019;
             var currentYear = new Date().getFullYear();
@@ -231,8 +216,8 @@
 
             // derive counts from DOM (safe fallbacks)
             var projects = 12;
-var services = 4;
-var certs = 2;
+            var services = 4;
+            var certs = 2;
 
             function animateCount($el, to, duration) {
                 if (!$el || $el.length === 0) return;
@@ -246,12 +231,28 @@ var certs = 2;
                 }, 25);
             }
 
-            // run after next tick to ensure DOM (including any injected partials) is ready
+            // wait for DOM to be ready
             setTimeout(function() {
-                animateCount($('#about-years'), years, 900);
-                animateCount($('#about-projects'), projects, 900);
-                animateCount($('#about-services'), services, 900);
-                animateCount($('#about-certs'), certs, 900);
+                var counterSection = document.querySelector('section[aria-label="Quick facts"]');
+                if (!counterSection) return;
+
+                var counterAnimated = false;
+
+                // Use Intersection Observer to detect when section comes into view
+                var observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting && !counterAnimated) {
+                            counterAnimated = true;
+                            animateCount($('#about-years'), years, 900);
+                            animateCount($('#about-projects'), projects, 900);
+                            animateCount($('#about-services'), services, 900);
+                            animateCount($('#about-certs'), certs, 900);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.3 });
+
+                observer.observe(counterSection);
             }, 50);
         })();
 

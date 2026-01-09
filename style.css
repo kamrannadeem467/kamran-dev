@@ -22,12 +22,10 @@
 
         /* Hero Section */
         .hero {
-            height:100vh;
             display:flex;
-            align-items:center;
             justify-content:center;
             text-align:center;
-            padding:0 20px;
+            padding:60px 20px;
             position:relative;
         }
 
@@ -430,3 +428,25 @@
             .footer-bottom { flex-direction:column; text-align:center; gap:8px; }
         }
     
+
+        .contact-banner {
+            width: 100%;
+            height: 220px; /* you can adjust 180–250px */
+            overflow: hidden;
+        }
+
+        .contact-banner-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+
+
+         .contact-hero { min-height:36vh; display:flex; align-items:center; background:transparent; }
+    .contact-card { background: rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.04); padding:20px; border-radius:12px; }
+    .contact-item { display:flex; gap:12px; align-items:flex-start; }
+    .contact-icon { min-width:44px; height:44px; border-radius:10px; background:linear-gradient(90deg,#ff6b00,#ff0099); color:#fff; display:inline-flex; align-items:center; justify-content:center; font-weight:700; }
+    .form-alert { display:none; }
+    @media (max-width:576px){ .contact-icon{min-width:40px;height:40px} }

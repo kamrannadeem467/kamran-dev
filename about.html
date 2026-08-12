@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -14,7 +15,6 @@
     <!-- Site CSS -->
     <link rel="stylesheet" href="style.css" />
     <style>
-        
         /* Contact button — more prominent with icon and subtle animation */
         .btn-contact {
             display: inline-flex;
@@ -24,9 +24,9 @@
             border-radius: 40px;
             background: linear-gradient(90deg, #ff6b00 0%, #ff0099 100%);
             color: #fff;
-            font-weight:700;
+            font-weight: 700;
             text-decoration: none;
-            box-shadow: 0 6px 18px rgba(255,107,0,0.12);
+            box-shadow: 0 6px 18px rgba(255, 107, 0, 0.12);
             transition: transform .15s ease, box-shadow .15s ease;
             border: none;
         }
@@ -34,30 +34,39 @@
         .btn-contact .btn-icon {
             width: 36px;
             height: 36px;
-            display:inline-flex;
-            align-items:center;
-            justify-content:center;
-            background: rgba(255,255,255,0.08);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.08);
             border-radius: 8px;
-            font-weight:700;
+            font-weight: 700;
             font-size: 0.95rem;
         }
 
         .btn-contact:hover,
         .btn-contact:focus {
             transform: translateY(-3px);
-            box-shadow: 0 12px 28px rgba(255,107,0,0.16);
-            text-decoration:none;
+            box-shadow: 0 12px 28px rgba(255, 107, 0, 0.16);
+            text-decoration: none;
             outline: none;
         }
 
         /* small responsive tweak */
         @media (max-width: 576px) {
-            .btn-contact { padding:10px 16px; gap:8px; }
-            .btn-contact .btn-icon { width:30px; height:30px; font-size:0.85rem; }
+            .btn-contact {
+                padding: 10px 16px;
+                gap: 8px;
+            }
+
+            .btn-contact .btn-icon {
+                width: 30px;
+                height: 30px;
+                font-size: 0.85rem;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <!-- Header (partial) -->
@@ -73,33 +82,69 @@
     </script>
     <!-- Full width slim contact image -->
     <div class="contact-banner">
-        <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/is_web_development_good_career.jpg" alt="Contact Banner" class="contact-banner-img">
+        <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/is_web_development_good_career.jpg"
+            alt="Contact Banner" class="contact-banner-img">
     </div>
 
     <!-- About Hero -->
     <section class="hero" id="about-hero" style="padding: 0px 20px 60px 20px;">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
+
                 <div class="col-md-7">
-                    <h1 style="font-weight:700;">About <span style="color:#ff6b00;">Kamran</span></h1>
-                    <p style="opacity:.85;max-width:720px;">
-                        I am a professional web developer specializing in building modern, responsive, and scalable web applications for businesses and startups. I deliver complete web solutions including business websites, admin dashboards, authentication systems, and custom web applications. <br><br>
-                        I work primarily with Laravel for both backend and frontend development, using Blade, Bootstrap, HTML, CSS, and JavaScript to build secure, user-friendly, and production-ready systems. I also have foundational knowledge of .NET Core and continue to expand my skills in modern web technologies.
+
+                    <h1 style="font-weight:700;">
+                        About <span style="color:#ff6b00;">Kamran</span>
+                    </h1>
+
+                    <p style="opacity:.85; max-width:720px; line-height:1.7;">
+
+                        I am a Software Developer focused on building practical,
+                        user-friendly, and scalable applications across web and
+                        mobile platforms.
+
+                        <br><br>
+
+                        My experience includes web and mobile application development,
+                        backend systems, REST APIs, database integration, and
+                        frontend-backend communication. I work across different
+                        technologies and frameworks, including Laravel, .NET Core,
+                        Flutter, and modern JavaScript technologies.
+
+                        <br><br>
+
+                        I enjoy turning ideas into functional applications, solving
+                        practical problems through software, and continuously learning
+                        new technologies to improve my development skills and build
+                        better digital solutions.
                     </p>
 
                     <p style="margin-top:18px;">
-                        <a class="btn btn-custom mt-3 mb-3" href="../assets/Muhammad_Kamran_Web_App_Developer.pdf" target="_blank"aria-label="Open PDF CV">View CV (PDF)</a>
-                        <!-- Updated contact button -->
+
+                        <a class="btn btn-custom mt-3 mb-3" href="../assets/Kamran.pdf" target="_blank"
+                            aria-label="Open PDF CV">
+                            View CV (PDF)
+                        </a>
+
                         <a class="btn-contact ms-2 mb-3" href="/contact.html" aria-label="Go to contact page">
+
                             <span class="btn-icon" aria-hidden="true">✉</span>
                             <span>Contact Me</span>
+
                         </a>
+
                     </p>
+
                 </div>
 
+
                 <div class="col-md-5 text-center">
-                    <img src="assets/WhatsApp Image 2025-11-12 at 3.52.03 PM.jpeg" alt="Kamran Nadeem" class="img-fluid rounded-circle" style="max-width:300px;">
+
+                    <img src="assets/kamran.jpeg" alt="Kamran Nadeem" class="img-fluid rounded-circle"
+                        style="max-width:300px;">
+
                 </div>
+
             </div>
         </div>
     </section>
@@ -108,75 +153,61 @@
     <section class="py-4" aria-label="Quick facts">
         <div class="container text-center">
             <div class="d-flex justify-content-center gap-4 flex-wrap">
-                <div><strong id="about-years" style="font-size:1.6rem;color:#ff6b00;">3</strong><div class="small">Years Experience</div></div>
-                <div><strong id="about-projects" style="font-size:1.6rem;color:#ff6b00;">10</strong><div class="small">Projects</div></div>
-                <div><strong id="about-services" style="font-size:1.6rem;color:#ff6b00;">4</strong><div class="small">Services</div></div>
-                <div><strong id="about-certs" style="font-size:1.6rem;color:#ff6b00;">2</strong><div class="small">Certifications</div></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Detailed Bio -->
-    <section id="bio" class="py-5">
-        <div class="container">
-            <h2 style="font-weight:700;">Bio</h2>
-            <p style="opacity:.85;">
-                I started my development journey at Aptech, where I completed structured coursework and hands-on projects focused on web technologies.
-                Since then, I have worked on real business websites, admin panels, and complete web applications, including appointment booking systems and e-commerce style projects.
-                I continuously improve my skills, with a strong focus on Laravel-based development and currently learning .NET Core for backend expansion.
-            </p>
-
-            <h3 class="mt-4" style="font-weight:700;">What I do</h3>
-            <ul>
-                <li>Business websites and custom web application development</li>
-                <li>Admin panels, dashboards, and authentication systems</li>
-                <li>Online booking systems and database-driven applications</li>
-                <li>Website deployment, maintenance, and client support</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Key Skills -->
-    <section id="about-skills" class="skills-section py-4">
-        <div class="container">
-            <h3 style="font-weight:700;">Key Skills</h3>
-            <div class="row mt-3">
-                <div class="col-md-6">
-                    <div class="skill mb-3">
-                        <div class="skill-name d-flex justify-content-between"><span>HTML</span><span class="skill-percent">90%</span></div>
-                        <div class="progress"><div class="progress-bar" data-percent="90" style="width:90%"></div></div>
-                    </div>
-
-                    <div class="skill mb-3">
-                        <div class="skill-name d-flex justify-content-between"><span>CSS</span><span class="skill-percent">80%</span></div>
-                        <div class="progress"><div class="progress-bar" data-percent="80" style="width:80%"></div></div>
-                    </div>
-
-                    <div class="skill mb-3">
-                        <div class="skill-name d-flex justify-content-between"><span>React Js</span><span class="skill-percent">45%</span></div>
-                        <div class="progress"><div class="progress-bar" data-percent="45" style="width:45%"></div></div>
-                    </div>
+                <div><strong id="about-years" style="font-size:1.6rem;color:#ff6b00;">3</strong>
+                    <div class="small">Years Experience</div>
                 </div>
-
-                <div class="col-md-6">
-                    <div class="skill mb-3">
-                        <div class="skill-name d-flex justify-content-between"><span>Laravel</span><span class="skill-percent">75%</span></div>
-                        <div class="progress"><div class="progress-bar" data-percent="75" style="width:75%"></div></div>
-                    </div>
-
-                    <div class="skill mb-3">
-                        <div class="skill-name d-flex justify-content-between"><span>.NET Core (learning)</span><span class="skill-percent">60%</span></div>
-                        <div class="progress"><div class="progress-bar" data-percent="60" style="width:60%"></div></div>
-                    </div>
-
-                    <div class="skill mb-3">
-                        <div class="skill-name d-flex justify-content-between"><span>Flutter (learning)</span><span class="skill-percent">20%</span></div>
-                        <div class="progress"><div class="progress-bar" data-percent="20" style="width:20%"></div></div>
-                    </div>
+                <div><strong id="about-projects" style="font-size:1.6rem;color:#ff6b00;">10</strong>
+                    <div class="small">Projects</div>
+                </div>
+                <div><strong id="about-services" style="font-size:1.6rem;color:#ff6b00;">4</strong>
+                    <div class="small">Services</div>
+                </div>
+                <div><strong id="about-certs" style="font-size:1.6rem;color:#ff6b00;">2</strong>
+                    <div class="small">Certifications</div>
                 </div>
             </div>
         </div>
     </section>
+
+   <!-- Detailed Bio -->
+<section id="bio" class="py-5">
+    <div class="container">
+
+        <h2 style="font-weight:700;">Bio</h2>
+
+        <p style="opacity:.85; line-height:1.7;">
+            I started my software development journey at Aptech, where I
+            developed a strong foundation in programming and software
+            development through structured coursework and hands-on projects.
+            Since then, I have continued building practical applications
+            across web and mobile platforms while expanding my knowledge of
+            backend development, APIs, databases, and modern development
+            technologies.
+        </p>
+
+        <p style="opacity:.85; line-height:1.7;">
+            My development experience includes building web applications,
+            backend systems, REST APIs, database-driven applications, and
+            cross-platform mobile applications. I focus on writing practical
+            solutions, improving my problem-solving skills, and continuously
+            learning new technologies to grow as a Software Developer.
+        </p>
+
+
+        <h3 class="mt-4" style="font-weight:700;">What I Do</h3>
+
+        <ul>
+            <li>Web application development and responsive user interfaces</li>
+            <li>Backend development, REST APIs, and API integration</li>
+            <li>Cross-platform mobile application development</li>
+            <li>Database-driven applications and CRUD systems</li>
+            <li>Building practical projects to strengthen software development skills</li>
+        </ul>
+
+    </div>
+</section>
+
+    
 
     <!-- Footer (partial) -->
     <div id="site-footer"></div>
@@ -223,7 +254,7 @@
                 if (!$el || $el.length === 0) return;
                 var from = 0;
                 var start = Date.now();
-                var timer = setInterval(function() {
+                var timer = setInterval(function () {
                     var progress = Math.min(1, (Date.now() - start) / duration);
                     var value = Math.floor(progress * (to - from) + from);
                     $el.text(value);
@@ -232,15 +263,15 @@
             }
 
             // wait for DOM to be ready
-            setTimeout(function() {
+            setTimeout(function () {
                 var counterSection = document.querySelector('section[aria-label="Quick facts"]');
                 if (!counterSection) return;
 
                 var counterAnimated = false;
 
                 // Use Intersection Observer to detect when section comes into view
-                var observer = new IntersectionObserver(function(entries) {
-                    entries.forEach(function(entry) {
+                var observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
                         if (entry.isIntersecting && !counterAnimated) {
                             counterAnimated = true;
                             animateCount($('#about-years'), years, 900);
@@ -257,7 +288,7 @@
         })();
 
         // expose footer init (used by footer partial loader)
-        window.initFooterCounters = function() {
+        window.initFooterCounters = function () {
             var startYear = 2019;
             var currentYear = new Date().getFullYear();
             var years = Math.max(0, currentYear - startYear);
@@ -268,7 +299,7 @@
 
             function animateCount($el, to, duration) {
                 var from = 0; var start = Date.now();
-                var timer = setInterval(function() {
+                var timer = setInterval(function () {
                     var progress = Math.min(1, (Date.now() - start) / duration);
                     var value = Math.floor(progress * (to - from) + from);
                     $el.text(value);
@@ -283,4 +314,5 @@
         };
     </script>
 </body>
+
 </html>
